@@ -9,7 +9,7 @@ GRAFANA_NON_PROD_API_KEY = '<api_key>'
 GRAFANA_NON_PROD_HOST = '<host>'
 GRAFANA_PROD_API_KEY = '<api_key>'
 GRAFANA_PROD_HOST = '<host>'
-FOLD
+
 #creating foler in non-prod
 grafana_non_prod_conn = connectGrafana(GRAFANA_NON_PROD_API_KEY,GRAFANA_NON_PROD_HOST)
 title = "Linux Metrics"
