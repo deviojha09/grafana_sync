@@ -41,3 +41,14 @@ class GrafanaSync:
           non_prod_conn.dashbaord.update_dashbaord(dashbaord={'dashbaord': json.loads(src_dashbaord),folderId: src_folderid, 'overwrite': True})
       else:
         print("No Dashbaords found to sync")
+
+        
+GRAFANA_NON_PROD_API_KEY = '<api_key>'
+GRAFANA_NON_PROD_HOST = '<host>'
+GRAFANA_PROD_API_KEY = '<api_key>'
+GRAFANA_PROD_HOST = '<host>'
+
+graf = GrafanaSync()
+grafana_non_prod_conn = graf.connectGrafana(GRAFANA_NON_PROD_API_KEY,GRAFANA_NON_PROD_HOST)
+grafana_prod_conn = graf.connectGrafana(GRAFANA_PROD_API_KEY,GRAFANA_PROD_HOST)
+graf.syncdashbaords(grafana_non_prod_conn,grafana_prod_conn)
